@@ -10,6 +10,8 @@ class Grid
     @elements_on_deck = [@elements[0]]
   end
 
+  # Loop through every possible grid coordinate and check if an element 
+  # exits there
   def display
     output = ""
     (0..(@size-1)).each do |row|
@@ -21,6 +23,8 @@ class Grid
     output
   end
 
+  # For ever element "on deck", loop through every possible direction until
+  # an element is hit. If not, return false and program exits.
   def activate
     activated_elements = Array.new
     
